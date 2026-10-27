@@ -1,29 +1,70 @@
-# Dicionário preliminar de variáveis
+Dicionário preliminar de variáveis
 
-## Objetivo
+1. Objetivo
 
-Este dicionário apresenta as principais informações que a equipe pretende investigar no projeto sobre o perfil e a inserção dos economistas no mercado de trabalho da Paraíba.
+Este documento apresenta as principais variáveis que poderão ser utilizadas no projeto “Perfil e inserção dos economistas no mercado de trabalho da Paraíba: diagnóstico para apoiar o Observatório Econômico do CORECON-PB”.
 
-As variáveis são preliminares. Sua disponibilidade, definição e forma de mensuração serão confirmadas após a seleção e análise das bases de dados.
+O objetivo é orientar a identificação, a descrição e a análise das informações relacionadas à formação acadêmica e à inserção dos economistas no mercado de trabalho paraibano.
 
-| Variável | Descrição | Tipo | Unidade ou categoria | Fonte / cobertura pretendida |
-|---|---|---|---|---|
-| ano_referencia | Ano ao qual a informação se refere | Numérica (inteira) | Ano | Bases selecionadas; período a confirmar |
-| localizacao | Estado ou município de referência | Categórica | UF ou município | Bases com identificação geográfica; Paraíba |
-| ocupacao | Ocupação profissional registrada na base | Categórica | Código ou descrição da ocupação | RAIS/CAGED, se aplicável; cobertura a confirmar |
-| escolaridade | Nível de escolaridade informado | Categórica ordinal | Categorias da fonte | Bases de emprego ou educacionais, conforme disponibilidade |
-| remuneracao | Remuneração registrada | Numérica | Reais (R$), período a confirmar | Bases que disponibilizem remuneração |
-| setor_atividade | Setor econômico do vínculo de trabalho | Categórica | Classificação da fonte | Bases de emprego formal, se aplicável |
-| tipo_vinculo | Tipo de vínculo de trabalho | Categórica | Categorias da fonte | Bases que disponibilizem essa informação |
-| quantidade_registros | Número de registros ou profissionais contabilizados | Numérica (inteira) | Contagem | CORECON-PB ou outras fontes, conforme disponibilidade |
-| curso | Curso de graduação relacionado à Economia | Categórica | Nome do curso | MEC/e-MEC, se aplicável |
-| instituicao_ensino | Instituição que oferta o curso | Categórica | Nome da instituição | MEC/e-MEC, se aplicável |
+As variáveis são preliminares. Sua disponibilidade, definição, formato e unidade de medida serão confirmados após a seleção e a consulta às bases de dados.
 
-## Observações metodológicas
+2. Dicionário de variáveis
 
-- As variáveis listadas são propostas iniciais, não uma confirmação de que todas existem em cada base.
-- Os nomes e códigos originais serão registrados quando as fontes forem selecionadas.
-- A unidade de análise deverá ser definida conforme a base: pessoa, vínculo de emprego, estabelecimento, curso ou instituição.
-- Variáveis de remuneração exigem atenção ao período de referência e à unidade monetária.
-- A junção entre bases só será realizada quando houver identificadores compatíveis e uso permitido.
-- Informações pessoais ou restritas não serão publicadas no repositório.
+Variável proposta	Descrição	Tipo de dado	Unidade ou categoria	Fonte e cobertura pretendida
+ano_referencia	Ano ao qual a informação se refere	Numérico inteiro	Ano	RAIS, PNAD Contínua ou outras fontes selecionadas; período a confirmar
+localizacao	Localização geográfica da informação	Categórico	UF ou município, conforme disponibilidade	Bases com informação geográfica; foco na Paraíba
+ocupacao	Ocupação profissional registrada na base	Categórico	Código ou descrição da ocupação	RAIS ou outra fonte de emprego, se disponível
+escolaridade	Nível de escolaridade informado	Categórico ordinal	Categorias definidas pela fonte	Bases de emprego ou pesquisas domiciliares, conforme disponibilidade
+remuneracao	Valor da remuneração registrado	Numérico	Reais (R$), com período de referência a confirmar	Bases que disponibilizem remuneração
+setor_atividade	Setor econômico relacionado à ocupação ou ao vínculo	Categórico	Classificação adotada pela fonte	Bases de emprego, conforme disponibilidade
+tipo_vinculo	Tipo de vínculo de trabalho registrado	Categórico	Categorias da fonte	Bases que disponibilizem essa informação
+quantidade_registros	Quantidade de registros contabilizados em uma análise	Numérico inteiro	Número de registros	Calculada a partir da base selecionada
+curso	Nome do curso de graduação	Categórico	Nome ou código do curso	MEC/e-MEC e instituições de ensino
+instituicao_ensino	Instituição responsável pela oferta do curso	Categórico	Nome ou código da instituição	MEC/e-MEC
+situacao_curso	Situação do curso no sistema consultado	Categórico	Categorias informadas pela fonte	MEC/e-MEC, conforme disponibilidade
+fonte_dado	Identificação da base de origem do registro	Categórico	Nome ou código da fonte	Todas as bases efetivamente utilizadas
+
+3. Definição das unidades de análise
+
+A unidade de análise dependerá da fonte consultada:
+
+* Pessoa: indivíduo observado em uma pesquisa, quando a base permitir essa interpretação.
+* Vínculo de emprego: relação de trabalho registrada, que não corresponde necessariamente a uma pessoa diferente.
+* Curso: curso de graduação registrado no sistema educacional.
+* Instituição de ensino: instituição que oferece o curso.
+* Registro agregado: total ou indicador calculado a partir dos dados disponíveis.
+
+Essas unidades não deverão ser tratadas como equivalentes. Por exemplo, o número de vínculos de emprego não representa necessariamente o número de economistas empregados.
+
+4. Padronização e tratamento
+
+Após a seleção das bases, serão realizados, quando necessários:
+
+* Registro dos nomes e códigos originais das variáveis;
+* Padronização dos nomes utilizados nos arquivos tratados;
+* Identificação dos tipos de dados e das unidades de medida;
+* Verificação de valores ausentes, duplicidades e inconsistências;
+* Registro das categorias e classificações utilizadas por cada fonte;
+* Documentação das alterações realizadas durante o tratamento.
+
+A variável de remuneração deverá ser interpretada considerando o período de referência e a definição utilizada pela fonte. Comparações entre períodos poderão exigir procedimentos adicionais, devidamente documentados.
+
+5. Relacionamento entre bases
+
+A integração de informações de diferentes fontes dependerá da existência de identificadores compatíveis, da comparabilidade conceitual e das condições legais de uso.
+
+Não serão combinadas bases apenas porque apresentam variáveis com nomes semelhantes. As chaves utilizadas, os critérios de relacionamento e as limitações encontradas deverão ser registrados.
+
+6. Limitações metodológicas
+
+* A presença de uma variável neste dicionário não significa que ela esteja disponível em todas as fontes.
+* A identificação específica dos economistas dependerá das informações efetivamente disponibilizadas.
+* Bases de emprego formal não representam necessariamente todas as formas de inserção profissional.
+* Informações sobre cursos e instituições de ensino descrevem a formação ofertada, mas não comprovam, por si só, a inserção profissional dos graduados.
+* Os dados e indicadores deverão ser interpretados considerando sua cobertura, unidade de análise e limitações.
+
+7. Atualização do dicionário
+
+Este documento será atualizado após a seleção e a consulta às bases. Para cada variável efetivamente utilizada, serão registrados o nome original, a descrição, o tipo, a unidade ou categoria, a fonte e o período de cobertura.
+
+As variáveis não disponíveis ou consideradas inadequadas serão retiradas ou identificadas como não utilizadas, conforme a evolução da pesquisa.
