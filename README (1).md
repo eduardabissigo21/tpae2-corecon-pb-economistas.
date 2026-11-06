@@ -1,3 +1,4 @@
+[README (2).md](https://github.com/user-attachments/files/34461164/README.2.md)
 # Perfil e inserção dos economistas no mercado de trabalho da Paraíba
 
 Projeto aplicado de extensão da disciplina **PSAE00320 – Técnicas de Pesquisa e Análise Econômica II** (UFPB, Turma 01, 2026.2).
